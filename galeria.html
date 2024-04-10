@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galería</title>
+    <style>
+        body, h1, p {
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Estilos básicos */
+        body {
+            display: grid;
+            grid-template-rows: auto 1fr auto;
+            min-height: 100vh;
+            font-family: Arial, sans-serif;
+            background: #f4f4f4;
+        }
+
+        /* Siempre muestra la barra de desplazamiento vertical */
+        html {
+            overflow-y: scroll;
+        }
+
+        /* Container simulando Bootstrap */
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 15px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        /* Navegación */
+        nav {
+            background-color: #000;
+            color: white;
+        }
+        nav .container > .brand {
+            font-weight: bold;
+            color: white;
+        }
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+            height: 50px;
+        }
+        nav ul li {
+            margin: 0 10px;
+        }
+        nav ul li a {
+            text-decoration: none;
+            color: white;
+            font-weight: bold;
+        }
+        nav ul li a:hover {
+            color: yellow;
+        }
+
+        /* Galería de imágenes */
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /* Ajuste del tamaño mínimo de las columnas */
+            gap: 10px; /* Espacio entre imágenes */
+            padding: 20px; /* Ajuste del padding */
+            box-sizing: border-box;
+        }
+        .gallery img {
+            width: 100%; /* Ancho total dentro de su celda */
+            height: auto; /* Altura automática para mantener la proporción */
+            object-fit: cover; /* Ajusta la imagen para cubrir el contenedor sin distorsionarla */
+        }
+
+        /* Pie de página */
+        footer {
+            background-color: #f8f9fa;
+            box-shadow: 0 -2px 4px rgba(0,0,0,0.1);
+            text-align: center;
+            padding: 10px 0;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="container">
+            <a href="./index.html" class="brand">GALERÍA DE ARTE</a>
+            <ul>
+                <li><a href="./index.html">Inicio</a></li>
+                <li><a href="./galeria.html">Galería</a></li>
+                <li><a href="./contacto.html">Contacto</a></li>
+            </ul>
+        </div>
+    </nav>
+    
+    <div class="gallery">
+        <img src="https://cdn.pixabay.com/photo/2022/09/13/18/04/art-7452561_640.jpg" alt="Imagen 1">
+        <img src="https://cdn.pixabay.com/photo/2023/11/25/02/09/ai-generated-8410929_640.jpg" alt="Imagen 2">
+        <img src="https://cdn.pixabay.com/photo/2023/11/25/02/09/ai-generated-8410930_960_720.jpg" alt="Imagen 3">
+        <img src="https://cdn.pixabay.com/photo/2023/11/25/02/09/ai-generated-8410932_960_720.jpg" alt="Imagen 4">
+        <img src="https://cdn.pixabay.com/photo/2024/04/08/05/19/ai-generated-8682701_1280.jpg" alt="Imagen 5">
+        <img src="https://cdn.pixabay.com/photo/2022/04/10/12/37/pablo-picasso-7123310_1280.jpg" alt="Imagen 6">
+        <img src="https://cdn.pixabay.com/photo/2017/01/31/18/09/face-2026098_1280.png" alt="Imagen 7">
+        <img src="https://cdn.pixabay.com/photo/2020/06/02/18/48/art-5252156_1280.jpg" alt="Imagen 8">
+        <img src="https://cdn.pixabay.com/photo/2022/12/20/12/28/picasso-7667784_1280.jpg" alt="Imagen 9">
+        <img src="https://cdn.pixabay.com/photo/2024/04/05/04/24/ai-generated-8676487_1280.png" alt="Imagen 10">
+    </div>
+    
+    <footer>
+        Hecho por Sebastian Lagos
+    </footer>
+</body>
+</html>
