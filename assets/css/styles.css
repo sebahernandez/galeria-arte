@@ -74,6 +74,13 @@ h2 {
   padding: 20px 0;
 }
 
+.modal-img {
+  width: 100%;
+  height: auto;
+  max-height: 400px; /* Adjust the maximum height as needed */
+  object-fit: cover;
+}
+
 @media (max-width: 768px) {
   .heading {
     font-size: 50px;
